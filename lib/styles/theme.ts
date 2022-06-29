@@ -1,8 +1,17 @@
+
+import "@fontsource/sen"
 import { createTheme } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
 
+
 // Create a theme instance.
 const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Sen',
+      'Arial'
+    ].join(',')
+  },
   palette: {
     primary: {
       main: '#556cd6',

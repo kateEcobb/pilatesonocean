@@ -1,9 +1,12 @@
 import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
+import { Typography, Container, Box } from '@mui/material'
+import Copyright from '../Copyright'
 
 const Main: FC<any> = ({ children }) => (
   <Container maxWidth="lg">
+    <Typography variant="h2" gutterBottom my={4}>
+      Pilates on Ocean
+    </Typography>
     <Box
       sx={{
         my: 4,
@@ -14,6 +17,7 @@ const Main: FC<any> = ({ children }) => (
       }}
     >
       {children}
+      <Copyright />
     </Box>
   </Container>
 )
