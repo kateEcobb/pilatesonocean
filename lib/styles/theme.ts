@@ -1,9 +1,14 @@
 
 import "@fontsource/sen"
 import { createTheme } from '@mui/material/styles'
-import { red } from '@mui/material/colors'
 
-
+const colors = {
+  one: '#22223b',
+  two: '#4a4e69',
+  three: '#9a8c98',
+  four: '#c9ada7',
+  five: '#f2e9e4'
+}
 // Create a theme instance.
 const theme = createTheme({
   typography: {
@@ -14,13 +19,17 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#556cd6',
+      main: colors.one,
     },
     secondary: {
-      main: '#19857b',
+      main: colors.three,
     },
-    error: {
-      main: red.A400,
+    text: {
+      primary: colors.one,
+      secondary: colors.two,
+    },
+    background: {
+      default: colors.five
     },
   },
 })
