@@ -7,7 +7,7 @@ const Contact: NextPage = () => {
     <Grid container>
       <Grid item>
         <Typography variant="h4" gutterBottom>
-          Contact
+          Services
         </Typography>
         <Grid item xs={2}>
           <Typography variant="h6">Email</Typography>

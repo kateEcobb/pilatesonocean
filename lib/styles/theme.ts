@@ -1,21 +1,17 @@
-
-import "@fontsource/sen"
-import { createTheme } from '@mui/material/styles'
+import "@fontsource/sen";
+import { createTheme } from "@mui/material/styles";
 
 const colors = {
-  one: '#22223b',
-  two: '#4a4e69',
-  three: '#9a8c98',
-  four: '#c9ada7',
-  five: '#f2e9e4'
-}
+  one: "#22223b",
+  two: "#4a4e69",
+  three: "#9a8c98",
+  four: "#c9ada7",
+  five: "#f2e9e4",
+};
 // Create a theme instance.
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      'Sen',
-      'Arial'
-    ].join(',')
+    fontFamily: ["Sen", "Arial"].join(","),
   },
   palette: {
     primary: {
@@ -29,9 +25,9 @@ const theme = createTheme({
       secondary: colors.two,
     },
     background: {
-      default: colors.five
+      default: colors.five,
     },
   },
-})
+});
 
-export default theme
+export default theme;
