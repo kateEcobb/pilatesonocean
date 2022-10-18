@@ -18,16 +18,20 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
     {...props}
     TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
   />
-))(({ theme }) => ({
+))(({ theme, sx }) => ({
   "& .MuiTabs-indicator": {
     display: "flex",
     justifyContent: "center",
-    backgroundColor: "transparent",
+    backgroundColor: "inherit",
+    color: "inherit",
+    ...sx,
   },
   "& .MuiTabs-indicatorSpan": {
     maxWidth: "50%",
     width: "100%",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "inherit",
+    color: "inherit",
+    ...sx,
   },
 }));
 
@@ -37,9 +41,7 @@ export const StyledTab = styled((props: StyledTabProps) => (
   textTransform: "none",
   fontWeight: theme.typography.fontWeightRegular,
   fontSize: theme.typography.pxToRem(15),
-  "&.Mui-selected": {
-    color: theme.palette.primary.main,
-  },
+  color: "inherit",
   "&.Mui-focusVisible": {
     backgroundColor: "rgba(8, 7, 9, 0.32)",
   },
