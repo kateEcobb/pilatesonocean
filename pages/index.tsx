@@ -1,7 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import Typography from "@mui/material/Typography";
-import { Box, Grid, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
 
 const ColorBlock = styled(Box)(({ theme }) => ({
@@ -13,19 +14,20 @@ const ColorBlock = styled(Box)(({ theme }) => ({
 const Home: NextPage = () => {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={6}>
-        <Typography variant="h4" gutterBottom>
-          Welcome
-        </Typography>
+      <Grid xs={6}>
         <Box>
           <Typography variant="h5" gutterBottom>
             Located in Ingleside, a residential neighborhood of San Francisco,
             Pilates on Ocean is a small boutique studio that is tranquil and
-            easily accessible.
+            easily accessible. <br /> <br /> In the studio, sessions utilize
+            Balanced Body apparatus, including the Reformer, Trapeze Table, and
+            the Combo Chair to achieve various therapeutic, rehabilitative, and
+            fitness benefits. Pilates on Ocean offers private and duet sessions
+            tailored to a spectrum of fitness goals, ages, and abilities.
           </Typography>
         </Box>
       </Grid>
-      <Grid item xs={6}>
+      <Grid xs={6}>
         <ColorBlock p={4}>
           <Image
             alt="Pilates"
@@ -36,7 +38,7 @@ const Home: NextPage = () => {
         </ColorBlock>
       </Grid>
 
-      <Grid item xs={6}>
+      <Grid xs={6}>
         <ColorBlock p={4}>
           <Image
             width="550px"
@@ -46,7 +48,7 @@ const Home: NextPage = () => {
           />
         </ColorBlock>
       </Grid>
-      <Grid item xs={4}>
+      <Grid xs={4}>
         <Typography variant="h4" gutterBottom>
           Isabel Rosenstock
         </Typography>
