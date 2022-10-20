@@ -1,18 +1,11 @@
 import React, { FC, SyntheticEvent, useState } from "react";
-import {
-  Typography,
-  Container,
-  Box,
-  styled,
-  useTheme,
-  colors,
-} from "@mui/material";
+import { Typography, Container, Box, styled, useTheme } from "@mui/material";
 import Copyright from "../Copyright";
 import { StyledTabs, StyledTab } from "../LinkTabs";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const Nav = ({ sx }: any) => {
+const Nav = ({ spanColor }: any) => {
   const [linkValue, setLinkValue] = useState(0);
 
   const handleNavigation = (event: SyntheticEvent, newValue: number) =>
@@ -23,7 +16,11 @@ const Nav = ({ sx }: any) => {
         Pilates on Ocean
       </Typography>
       <Box>
-        <StyledTabs value={linkValue} onChange={handleNavigation} sx={sx}>
+        <StyledTabs
+          value={linkValue}
+          onChange={handleNavigation}
+          spanColor={spanColor}
+        >
           <StyledTab label="Home" href="/" />
           <StyledTab label="Services" href="/services" />
           <StyledTab label="Contact" href="/contact" />
@@ -37,12 +34,12 @@ const Main: FC<any> = ({ children }) => {
   const { scrollYProgress } = useScroll();
   const theme = useTheme();
 
-  const color = useTransform(
-    scrollYProgress,
-    [0, 0.8],
-    ["#fff", theme.palette.primary.main]
-  );
-
+  // const color = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.8],
+  //   ["#000", theme.palette.primary.main]
+  // );
+  const color = theme.palette.primary.main;
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.8],
@@ -52,7 +49,7 @@ const Main: FC<any> = ({ children }) => {
   return (
     <>
       <Header style={{ color, backgroundColor }}>
-        <Nav sx={{ color, backgroundColor }} />
+        <Nav spanColor={color} />
       </Header>
 
       <ImageContainer>
@@ -61,7 +58,7 @@ const Main: FC<any> = ({ children }) => {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          src="https://media.self.com/photos/628e481b77d608f44f5f5abe/4:3/w_960,c_limit/what-is-pilates.jpeg"
+          src="https://images.squarespace-cdn.com/content/v1/58fd589986e6c0f3d2883ba4/1504806723496-WEZDNGV5A2H9M1JP285Y/6P1B0175+2.jpg"
         />
       </ImageContainer>
       <Container>
