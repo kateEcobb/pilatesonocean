@@ -10,11 +10,19 @@ const Nav = ({ spanColor }: any) => {
 
   const handleNavigation = (event: SyntheticEvent, newValue: number) =>
     setLinkValue(newValue);
+  const { scrollYProgress } = useScroll();
+  const theme = useTheme();
+
+  const fontSize = useTransform(
+    scrollYProgress,
+    [0, 0.8],
+    [theme.typography.h3.fontSize, theme.typography.h4.fontSize]
+  );
   return (
     <>
-      <Typography variant="h4" my={3}>
+      <AnimatedTitle my={3} variant="h3" style={{ fontSize }}>
         Pilates on Ocean
-      </Typography>
+      </AnimatedTitle>
       <Box>
         <StyledTabs
           value={linkValue}
@@ -61,13 +69,13 @@ const Main: FC<any> = ({ children }) => {
           src="https://images.squarespace-cdn.com/content/v1/58fd589986e6c0f3d2883ba4/1504806723496-WEZDNGV5A2H9M1JP285Y/6P1B0175+2.jpg"
         />
       </ImageContainer>
-      <Container>
-        {children}
-        <Copyright />
-      </Container>
+      <>{children}</>
+      <Copyright />
     </>
   );
 };
+
+const AnimatedTitle = motion(Typography);
 
 const Header = styled(motion.div)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
