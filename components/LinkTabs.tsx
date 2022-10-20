@@ -2,6 +2,7 @@ import React from "react";
 import Link from "./Link";
 import { Tabs, Tab, styled, TabProps } from "@mui/material";
 import { motion } from "framer-motion";
+import { reject } from "lodash";
 
 interface StyledTabsProps {
   children?: React.ReactNode;
@@ -15,15 +16,15 @@ interface StyledTabProps extends TabProps {
   href: string;
 }
 
-export const StyledTabs = styled((props: StyledTabsProps) => {
+export const StyledTabs = styled(({ spanColor, ...other }: StyledTabsProps) => {
   return (
     <Tabs
-      {...props}
+      {...other}
       textColor="inherit"
       TabIndicatorProps={{
         children: (
           <motion.span
-            style={{ backgroundColor: props.spanColor }}
+            style={{ backgroundColor: spanColor }}
             className="MuiTabs-indicatorSpan"
           />
         ),
