@@ -20,6 +20,7 @@ const Nav = ({ spanColor }: any) => {
   );
   return (
     <>
+      {/* @ts-ignore */}
       <AnimatedTitle my={3} variant="h3" style={{ fontSize }}>
         Pilates on Ocean
       </AnimatedTitle>
