@@ -3,30 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3030",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@fontsource/sen": "^4.5.8",
-    "@mui/material": "^5.8.6",
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fontsource/sen": "^4.5.9",
+    "@mui/material": "^5.10.6",
+    "framer-motion": "^7.5.4",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    
     "styled-components": "^5.3.5",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@types/node": "17.0.42",
-    "@types/react": "18.0.12",
-    "@types/react-dom": "18.0.5",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1",
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1",
-    "typescript": "4.7.3"
+    "prettier": "2.7.1",
+    "typescript": "4.8.3"
   }
 }
