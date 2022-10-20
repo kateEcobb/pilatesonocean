@@ -1,28 +1,55 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Grid, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 
 const Contact: NextPage = () => {
   return (
-    <Grid container>
-      <Grid item>
-        <Typography variant="h4" gutterBottom>
-          Contact
-        </Typography>
-        <Grid item xs={2}>
-          <Typography variant="h6">Email</Typography>
-        </Grid>
-        <Grid item>
-          <Typography variant="body1">isabel@pilatesonocean.com</Typography>
-        </Grid>
-        <Grid item xs={2}>
-          <Typography variant="h6">Phone</Typography>
-        </Grid>
-        <Grid item>
-          <Typography variant="body1">555-555-5555</Typography>
+    <Container>
+      <Grid container spacing={3}>
+        <Grid xs={12}>
+          <Typography variant="h4" pt={5} pb={3}>
+            Contact
+          </Typography>
+
+          <Typography variant="h6" gutterBottom py={2}>
+            Let's get in touch.
+          </Typography>
+          <Grid container p={0}>
+            <Grid xs={1}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                style={{ fontStyle: "italic" }}
+              >
+                Email:
+              </Typography>
+            </Grid>
+            <Grid xs={9}>
+              <Typography variant="h6" gutterBottom>
+                isabel@pilatesonocean.com
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container p={0}>
+            <Grid xs={1}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                style={{ fontStyle: "italic" }}
+              >
+                Phone:
+              </Typography>
+            </Grid>
+            <Grid xs={9}>
+              <Typography variant="h6" gutterBottom>
+                (415) 254-1571
+              </Typography>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </Container>
   );
 };
 
