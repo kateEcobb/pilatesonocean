@@ -13,7 +13,7 @@ const Contact: NextPage = () => {
           </Typography>
 
           <Typography variant="h6" gutterBottom py={2}>
-            Let's get in touch.
+            Let&apos;s get in touch.
           </Typography>
           <Grid container p={0}>
             <Grid xs={1}>
