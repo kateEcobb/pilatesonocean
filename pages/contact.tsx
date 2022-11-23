@@ -6,8 +6,6 @@ import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
-console.log({ MAPBOX_TOKEN });
-
 const Contact: NextPage = () => {
   return (
     <Container>
