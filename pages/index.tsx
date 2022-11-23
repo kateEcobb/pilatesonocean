@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Typography from "@mui/material/Typography";
-import { Box, styled, Container } from "@mui/material";
+import { Box, styled, Container, Link } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
 import alignment from "../public/images/alignment.jpg";
@@ -113,40 +113,56 @@ const Home: NextPage = () => {
           </Box>
         </Grid>
         <Grid xs={12}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             Degrees and Certifications
           </Typography>
           <Box>
-            <Typography variant="body1" gutterBottom>
-              <ul>
-                <li>
+            <ul>
+              <li>
+                <Link href="https://www.basipilates.com/education/foundation-program-dance-specialization/">
                   Body Arts and Science (BASI™) Pilates Foundation Program with
                   Dance Specialization
-                </li>
-                <li>
-                  BASI Pilates™ Comprehensive Apparatus Program with Dance
-                  Specialization
-                </li>
-                <li>
-                  California State University, Long Beach (2008-2012): B.F.A. in
-                  Dance
-                </li>
-              </ul>
-              Additional training and work
+                </Link>{" "}
+                & BASI Pilates™ Comprehensive Apparatus Program with Dance
+                Specialization
+              </li>
+
               <ul>
                 <li>
-                  Janet Stone Yoga 200 hour Yoga Teacher Training Program 2021
-                </li>
-                <li>
-                  Core Pilates and Physical Therapy, Apprentice under Julie
-                  Schottland-Cox, physical therapist/Pilates teacher
-                </li>
-                <li>
-                  Revitalize Integrated Body Systems, under Dr. Angelique Waite,
-                  D.C. + Blair Bodie, Pilates instructor
+                  Both taught by mentor{" "}
+                  <Link href="http://www.karenclippinger.com/index.htm">
+                    Karen Clippinger
+                  </Link>
                 </li>
               </ul>
-            </Typography>
+              <li>
+                <Link href="https://www.basipilates.com/education/low-back-pain-pilates-flexion-based-programs/">
+                  Low Back Pain & Pilates Workshop
+                </Link>{" "}
+                with Karen Clippinger
+              </li>
+              <li>
+                California State University, Long Beach (2008-2012): B.F.A. in
+                Dance
+              </li>
+            </ul>
+            <Typography variant="h5">Additional training and work</Typography>
+            <ul>
+              <li>
+                Janet Stone Yoga 200 hour Yoga Teacher Training Program 2021
+              </li>
+              <li>
+                Core Pilates and Physical Therapy, apprentice under Julie
+                Schottland-Cox, physical therapist/Pilates teacher
+              </li>
+              <li>
+                <Link href="http://www.ribschiropractic.com/services---techniques/pilates.html">
+                  Revitalize Integrated Body Systems
+                </Link>
+                , under Dr. Angelique Waite, D.C. + Blair Bodie, Pilates
+                instructor
+              </li>
+            </ul>
           </Box>
         </Grid>
       </Grid>
