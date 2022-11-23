@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { Box, styled, Container } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
-import headshot from "../public/images/MOOD.jpg";
+import alignment from "../public/images/alignment.jpg";
 import dancing from "../public/images/isabelDancing.jpg";
 
 const ColorBlock = styled(Box)(({ theme }) => ({
@@ -19,7 +19,7 @@ const ColorBlock = styled(Box)(({ theme }) => ({
 const Home: NextPage = () => {
   return (
     <Container>
-      <Grid container spacing={3}>
+      <Grid container spacing={5}>
         <Grid xs={12}>
           <Typography variant="h4" pt={5} pb={3}>
             Welcome
@@ -34,33 +34,6 @@ const Home: NextPage = () => {
               rehabilitative, and fitness benefits. Pilates on Ocean offers
               private and duet sessions tailored to a spectrum of fitness goals,
               ages, and abilities.
-            </Typography>
-          </Box>
-        </Grid>
-
-        <Grid xs={6}>
-          <ColorBlock>
-            <Image alt="Isabel Rosenstock" src={headshot} />
-          </ColorBlock>
-        </Grid>
-
-        <Grid xs={6}>
-          <Typography variant="h4" gutterBottom>
-            Isabel Rosenstock
-          </Typography>
-          <Box>
-            <Typography variant="h6" gutterBottom>
-              Isabel Rosenstock is a Certified Pilates Instructor and
-              professional dancer dedicated to Pilates and studying the moving
-              body. She began teaching Pilates in 2015 after personally
-              experiencing its vast benefits. She is passionate about sharing
-              this knowledge and helping her clients cultivate a sense of ease,
-              freedom, and joy in their bodies.
-              <br /> <br />
-              Isabel’s highly sensitive approach to teaching allows her to work
-              deeply with people to initiate change in their bodies. Her work
-              emphasizes INJURY PREVENTION, INJURY REHABILITATION, & ENHANCED
-              PHYSICAL / MENTAL WELLNESS.
             </Typography>
           </Box>
         </Grid>
@@ -110,8 +83,71 @@ const Home: NextPage = () => {
         </Grid>
         <Grid xs={6}>
           <ColorBlock>
-            <Image src={dancing} alt="dancing" />
+            <Image src={alignment} alt="alignment" />
           </ColorBlock>
+        </Grid>
+        <Grid xs={6}>
+          <ColorBlock>
+            <Image alt="Isabel Rosenstock" src={dancing} />
+          </ColorBlock>
+        </Grid>
+
+        <Grid xs={6}>
+          <Typography variant="h4" gutterBottom>
+            Isabel Rosenstock
+          </Typography>
+          <Box>
+            <Typography variant="h6" gutterBottom>
+              Isabel Rosenstock is a Certified Pilates Instructor and
+              professional dancer dedicated to Pilates and studying the moving
+              body. She began teaching Pilates in 2015 after personally
+              experiencing its vast benefits. She is passionate about sharing
+              this knowledge and helping her clients cultivate a sense of ease,
+              freedom, and joy in their bodies.
+              <br /> <br />
+              Isabel’s highly sensitive approach to teaching allows her to work
+              deeply with people to initiate change in their bodies. Her work
+              emphasizes INJURY PREVENTION, INJURY REHABILITATION, & ENHANCED
+              PHYSICAL / MENTAL WELLNESS.
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid xs={12}>
+          <Typography variant="h5" gutterBottom>
+            Degrees and Certifications
+          </Typography>
+          <Box>
+            <Typography variant="body1" gutterBottom>
+              <ul>
+                <li>
+                  Body Arts and Science (BASI™) Pilates Foundation Program with
+                  Dance Specialization
+                </li>
+                <li>
+                  BASI Pilates™ Comprehensive Apparatus Program with Dance
+                  Specialization
+                </li>
+                <li>
+                  California State University, Long Beach (2008-2012): B.F.A. in
+                  Dance
+                </li>
+              </ul>
+              Additional training and work
+              <ul>
+                <li>
+                  Janet Stone Yoga 200 hour Yoga Teacher Training Program 2021
+                </li>
+                <li>
+                  Core Pilates and Physical Therapy, Apprentice under Julie
+                  Schottland-Cox, physical therapist/Pilates teacher
+                </li>
+                <li>
+                  Revitalize Integrated Body Systems, under Dr. Angelique Waite,
+                  D.C. + Blair Bodie, Pilates instructor
+                </li>
+              </ul>
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
     </Container>

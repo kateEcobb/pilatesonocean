@@ -4,6 +4,7 @@ import Copyright from "../Copyright";
 import { StyledTabs, StyledTab } from "../LinkTabs";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import header from "../../public/images/header.jpg";
 
 const Nav = ({ spanColor }: any) => {
   const [linkValue, setLinkValue] = useState(0);
@@ -67,7 +68,7 @@ const Main: FC<any> = ({ children }) => {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          src="https://images.squarespace-cdn.com/content/v1/58fd589986e6c0f3d2883ba4/1504806723496-WEZDNGV5A2H9M1JP285Y/6P1B0175+2.jpg"
+          src={header}
         />
       </ImageContainer>
       <>{children}</>

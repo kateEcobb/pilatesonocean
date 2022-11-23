@@ -28,7 +28,11 @@ const Contact: NextPage = () => {
             </Grid>
             <Grid xs={9}>
               <Typography variant="h6" gutterBottom>
-                $110 per session, five for $525, or ten for $1,000.
+                Single session: $110
+                <br />
+                Package of 5: $525
+                <br />
+                Package of 10: $1000
               </Typography>
             </Grid>
           </Grid>
@@ -51,9 +55,14 @@ const Contact: NextPage = () => {
 
           <Typography variant="h6" gutterBottom py={2}>
             For those located outside of San Francisco, virtual sessions on Zoom
-            are available. All sessions are tailored to your individual needs
-            and space/equipment limitations. Virtual sessions are effective and
-            engaging whether you have all the equipment or nothing at all.
+            are available for $85/session. All sessions are tailored to your
+            individual needs and space/equipment limitations. Virtual sessions
+            are effective and engaging whether you have all the equipment or
+            nothing at all.
+          </Typography>
+          <Typography variant="h6" gutterBottom py={2} fontWeight="bold">
+            All appointments canceled or rescheduled with less than 24-hour
+            notice will incur the full appointment fee.
           </Typography>
         </Grid>
       </Grid>

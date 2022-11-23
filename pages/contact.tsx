@@ -31,22 +31,6 @@ const Contact: NextPage = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container p={0}>
-            <Grid xs={1}>
-              <Typography
-                variant="h6"
-                gutterBottom
-                style={{ fontStyle: "italic" }}
-              >
-                Phone:
-              </Typography>
-            </Grid>
-            <Grid xs={9}>
-              <Typography variant="h6" gutterBottom>
-                (415) 254-1571
-              </Typography>
-            </Grid>
-          </Grid>
         </Grid>
       </Grid>
     </Container>
