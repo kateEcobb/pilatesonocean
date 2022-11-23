@@ -14,6 +14,7 @@ const ColorBlock = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  position: "relative",
 }));
 
 const Home: NextPage = () => {
@@ -48,8 +49,8 @@ const Home: NextPage = () => {
               strengthening specific muscle groups with exercises that are
               designed to strengthen the core, create efficiency in movement and
               build awareness of our body as a whole system. The six principles
-              of Pilates-- concentration, control, center, flow, precision and
-              breathing—make for a balanced workout that is accessible for all
+              of Pilates — concentration, control, center, flow, precision and
+              breathing — make for a balanced workout that is accessible for all
               bodies, regardless of injuries or limitations. Using a combination
               of apparatus and mat work, each session is custom tailored to the
               individual needs of the client(s).
@@ -83,12 +84,24 @@ const Home: NextPage = () => {
         </Grid>
         <Grid xs={6}>
           <ColorBlock>
-            <Image src={alignment} alt="alignment" />
+            <Image
+              src={alignment}
+              alt="alignment"
+              layout="fill"
+              objectFit="fill"
+              objectPosition="center"
+            />
           </ColorBlock>
         </Grid>
         <Grid xs={6}>
           <ColorBlock>
-            <Image alt="Isabel Rosenstock" src={dancing} />
+            <Image
+              alt="Isabel Rosenstock"
+              src={dancing}
+              layout="fill"
+              objectFit="fill"
+              objectPosition="center"
+            />
           </ColorBlock>
         </Grid>
 
