@@ -104,6 +104,7 @@ const Header = styled(motion.div)(({ theme }) => ({
   padding: "0px 20px",
   position: "fixed",
   zIndex: 1,
+  overflow: "hidden",
 }));
 
 const ImageContainer = styled(Box)(({ theme }) => ({
