@@ -65,14 +65,20 @@ const Main: FC<any> = ({ children }) => {
   });
 
   const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
 
-  const color = theme.palette.primary.main;
+  const initialColor = isDesktop ? theme.palette.primary.main : theme.colors[4];
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.8],
     ["#ffffff00", theme.palette.secondary.main]
   );
 
+  const color = useTransform(
+    scrollYProgress,
+    [0, 0.8],
+    [initialColor, theme.palette.primary.main]
+  );
   return (
     <>
       <Header style={{ color, backgroundColor }}>

@@ -89,7 +89,7 @@ const Home: NextPage = () => {
               src={alignment}
               alt="alignment"
               layout="fill"
-              objectFit="fill"
+              objectFit="cover"
               objectPosition="center"
             />
           </ColorBlock>
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
               alt="Isabel Rosenstock"
               src={dancing}
               layout="fill"
-              objectFit="fill"
+              objectFit="cover"
               objectPosition="center"
             />
           </ColorBlock>
