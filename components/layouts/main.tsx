@@ -1,18 +1,33 @@
-import React, { FC, SyntheticEvent, useState } from "react";
-import { Typography, Container, Box, styled, useTheme } from "@mui/material";
+import React, { FC, SyntheticEvent, useState, useRef } from "react";
+import {
+  Typography,
+  Box,
+  styled,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import { useRouter } from "next/router";
 import Copyright from "../Copyright";
 import { StyledTabs, StyledTab } from "../LinkTabs";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import header from "../../public/images/header.jpg";
 
-const Nav = ({ spanColor }: any) => {
-  const [linkValue, setLinkValue] = useState(0);
+const ROUTE_VALUES = {
+  "/": 0,
+  "/services": 1,
+  "/contact": 2,
+};
+
+const Nav = ({ spanColor, scrollYProgress }: any) => {
+  const router = useRouter();
+  const [linkValue, setLinkValue] = useState(ROUTE_VALUES[router.pathname]);
 
   const handleNavigation = (event: SyntheticEvent, newValue: number) =>
     setLinkValue(newValue);
-  const { scrollYProgress } = useScroll();
+
   const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
 
   const fontSize = useTransform(
     scrollYProgress,
@@ -25,11 +40,13 @@ const Nav = ({ spanColor }: any) => {
       <AnimatedTitle my={3} variant="h3" style={{ fontSize }}>
         Pilates on Ocean
       </AnimatedTitle>
-      <Box>
+      <Box my={2}>
         <StyledTabs
           value={linkValue}
           onChange={handleNavigation}
           spanColor={spanColor}
+          orientation={isDesktop ? "horizontal" : "vertical"}
+          variant="fullWidth"
         >
           <StyledTab label="Home" href="/" />
           <StyledTab label="Services" href="/services" />
@@ -41,14 +58,14 @@ const Nav = ({ spanColor }: any) => {
 };
 
 const Main: FC<any> = ({ children }) => {
-  const { scrollYProgress } = useScroll();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
   const theme = useTheme();
 
-  // const color = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.8],
-  //   ["#000", theme.palette.primary.main]
-  // );
   const color = theme.palette.primary.main;
   const backgroundColor = useTransform(
     scrollYProgress,
@@ -59,10 +76,10 @@ const Main: FC<any> = ({ children }) => {
   return (
     <>
       <Header style={{ color, backgroundColor }}>
-        <Nav spanColor={color} />
+        <Nav spanColor={color} scrollYProgress={scrollYProgress} />
       </Header>
 
-      <ImageContainer>
+      <ImageContainer ref={ref}>
         <Image
           alt="pilates"
           layout="fill"

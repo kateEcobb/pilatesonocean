@@ -1,10 +1,9 @@
 import React from "react";
 import Link from "./Link";
-import { Tabs, Tab, styled, TabProps } from "@mui/material";
+import { Tabs, Tab, styled, TabProps, TabsProps } from "@mui/material";
 import { motion } from "framer-motion";
-import { reject } from "lodash";
 
-interface StyledTabsProps {
+interface StyledTabsProps extends TabsProps {
   children?: React.ReactNode;
   value: number;
   onChange: (event: React.SyntheticEvent, newValue: number) => void;
