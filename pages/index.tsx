@@ -11,6 +11,7 @@ const ColorBlock = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
   width: "100%",
   height: "100%",
+  minHeight: "360px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -58,7 +59,7 @@ const Home: NextPage = () => {
           </Box>
         </Grid>
 
-        <Grid xs={6}>
+        <Grid sm={6} xs={12}>
           <Typography variant="h4" gutterBottom>
             Why do Pilates?
           </Typography>
@@ -82,7 +83,7 @@ const Home: NextPage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid xs={6}>
+        <Grid xs={12} sm={6}>
           <ColorBlock>
             <Image
               src={alignment}
@@ -93,7 +94,7 @@ const Home: NextPage = () => {
             />
           </ColorBlock>
         </Grid>
-        <Grid xs={6}>
+        <Grid xs={12} sm={6}>
           <ColorBlock>
             <Image
               alt="Isabel Rosenstock"
@@ -105,7 +106,7 @@ const Home: NextPage = () => {
           </ColorBlock>
         </Grid>
 
-        <Grid xs={6}>
+        <Grid xs={12} sm={6}>
           <Typography variant="h4" gutterBottom>
             Isabel Rosenstock
           </Typography>
@@ -125,7 +126,7 @@ const Home: NextPage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid xs={12}>
+        <Grid xs={12} sm={6}>
           <Typography variant="h4" gutterBottom>
             Degrees and Certifications
           </Typography>
