@@ -53,12 +53,11 @@ const Contact: NextPage = () => {
             </Grid>
           </Grid>
 
-          <Typography variant="h6" gutterBottom py={2}>
+          <Typography variant="body1" gutterBottom py={2}>
             For those located outside of San Francisco, virtual sessions on Zoom
-            are available for $85/session. All sessions are tailored to your
-            individual needs and space/equipment limitations. Virtual sessions
-            are effective and engaging whether you have all the equipment or
-            nothing at all.
+            are available. All sessions are tailored to your individual needs
+            and space/equipment limitations. Virtual sessions are effective and
+            engaging whether you have all the equipment or nothing at all.
           </Typography>
           <Typography variant="h6" gutterBottom py={2} fontWeight="bold">
             All appointments canceled or rescheduled with less than 24-hour
