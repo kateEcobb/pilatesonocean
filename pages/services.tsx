@@ -1,7 +1,20 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+
+const Pricing = ({ service, note = "" }) => (
+  <Box sx={{ display: "flex", flexDirection: "column" }}>
+    {service}
+    <Typography variant="caption">{note}</Typography>
+  </Box>
+);
+
+const pricingOptions = [
+  { service: "Single session: $120", note: "" },
+  { service: "Package of 5: $575", note: "(expires after 60 days)" },
+  { service: "Package of 10: $1,100", note: "(expires after 120 days)" },
+];
 
 const Contact: NextPage = () => {
   return (
@@ -27,12 +40,10 @@ const Contact: NextPage = () => {
               </Typography>
             </Grid>
             <Grid xs={9}>
-              <Typography variant="h6" gutterBottom>
-                Single session: $110
-                <br />
-                Package of 5: $525
-                <br />
-                Package of 10: $1000
+              <Typography variant="h6">
+                {pricingOptions.map((option) => (
+                  <Pricing key={option.service} {...option} />
+                ))}
               </Typography>
             </Grid>
           </Grid>
@@ -48,7 +59,7 @@ const Contact: NextPage = () => {
             </Grid>
             <Grid xs={9}>
               <Typography variant="h6" gutterBottom>
-                $140 per session, or $70 per person.
+                $160 per session, or $80 per person.
               </Typography>
             </Grid>
           </Grid>
