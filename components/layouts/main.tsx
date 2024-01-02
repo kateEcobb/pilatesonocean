@@ -88,7 +88,7 @@ const Main: FC<any> = ({ children }) => {
     [0, 0.8],
     [initialColor, theme.palette.primary.main],
   );
-  console.log({ color });
+
   return (
     <>
       <Header style={{ color, backgroundColor }}>
@@ -98,10 +98,13 @@ const Main: FC<any> = ({ children }) => {
       <ImageContainer ref={ref}>
         <Image
           alt="pilates"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
           src={header}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
         />
       </ImageContainer>
       <>{children}</>
