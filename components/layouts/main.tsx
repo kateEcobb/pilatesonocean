@@ -12,15 +12,7 @@ import Copyright from "../Copyright";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import header from "../../public/images/header.jpg";
-import dynamic from "next/dynamic";
 import { StyledTabs, StyledTab } from "../LinkTabs";
-
-// const StyledTabs = dynamic(() =>
-//   import("../LinkTabs").then((mod) => mod.StyledTabs),
-// );
-// const StyledTab = dynamic(() =>
-//   import("../LinkTabs").then((mod) => mod.StyledTab),
-// );
 
 const ROUTE_VALUES = {
   "/": 0,
@@ -101,6 +93,7 @@ const Main: FC<any> = ({ children }) => {
           src={header}
           fill
           sizes="100vw"
+          priority
           style={{
             objectFit: "cover",
             objectPosition: "center",
