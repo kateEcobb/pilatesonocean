@@ -1,3 +1,4 @@
+"use client";
 import React, { FC, SyntheticEvent, useState, useRef } from "react";
 import {
   Typography,
@@ -32,7 +33,7 @@ const Nav = ({ spanColor, scrollYProgress }: any) => {
   const fontSize = useTransform(
     scrollYProgress,
     [0, 0.8],
-    [theme.typography.h3.fontSize, theme.typography.h4.fontSize]
+    [theme.typography.h3.fontSize, theme.typography.h4.fontSize],
   );
   return (
     <>
@@ -71,16 +72,16 @@ const Main: FC<any> = ({ children }) => {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.8],
-    ["#ffffff00", theme.palette.secondary.main]
+    ["#ffffff00", theme.palette.secondary.main],
   );
 
   const color = useTransform(
     scrollYProgress,
     [0, 0.8],
-    [initialColor, theme.palette.primary.main]
+    [initialColor, theme.palette.primary.main],
   );
   return (
-    <>
+    <body>
       <Header style={{ color, backgroundColor }}>
         <Nav spanColor={color} scrollYProgress={scrollYProgress} />
       </Header>
@@ -96,7 +97,7 @@ const Main: FC<any> = ({ children }) => {
       </ImageContainer>
       <>{children}</>
       <Copyright />
-    </>
+    </body>
   );
 };
 
