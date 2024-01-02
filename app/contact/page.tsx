@@ -20,7 +20,7 @@ const Contact: NextPage = () => {
             Let&apos;s get in touch.
           </Typography>
 
-          <Grid container p={0}>
+          <Grid container p={0} unstable_level={1}>
             <Grid xs={3}>
               <Typography variant="h6" style={{ fontStyle: "italic" }}>
                 Email:
@@ -34,7 +34,7 @@ const Contact: NextPage = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container px={0}>
+          <Grid container px={0} unstable_level={1}>
             <Grid xs={3}>
               <Typography
                 variant="h6"
