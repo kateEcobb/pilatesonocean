@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import type { NextPage } from "next";
 import { Container, Typography, Box } from "@mui/material";
@@ -16,7 +17,7 @@ const pricingOptions = [
   { service: "Package of 10: $1,100", note: "(expires after 120 days)" },
 ];
 
-const Contact: NextPage = () => {
+const Services: NextPage = () => {
   return (
     <Container>
       <Grid container spacing={3}>
@@ -29,7 +30,7 @@ const Contact: NextPage = () => {
             All in-studio sessions are tailored to your individual needs and
             goals.
           </Typography>
-          <Grid container px={0}>
+          <Grid container px={0} unstable_level={1}>
             <Grid xs={3}>
               <Typography
                 variant="h6"
@@ -47,7 +48,7 @@ const Contact: NextPage = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container px={0}>
+          <Grid container px={0} unstable_level={1}>
             <Grid xs={3}>
               <Typography
                 variant="h6"
@@ -80,4 +81,4 @@ const Contact: NextPage = () => {
   );
 };
 
-export default Contact;
+export default Services;

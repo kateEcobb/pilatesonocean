@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import type { NextPage } from "next";
 import Typography from "@mui/material/Typography";
@@ -88,10 +89,12 @@ const Home: NextPage = () => {
             <Image
               src={alignment}
               alt="alignment"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center"
+              }} />
           </ColorBlock>
         </Grid>
         <Grid xs={12} sm={6}>
@@ -99,10 +102,12 @@ const Home: NextPage = () => {
             <Image
               alt="Isabel Rosenstock"
               src={dancing}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center"
+              }} />
           </ColorBlock>
         </Grid>
 

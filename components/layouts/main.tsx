@@ -1,3 +1,4 @@
+"use client";
 import React, { FC, SyntheticEvent, useState, useRef } from "react";
 import {
   Typography,
@@ -6,12 +7,12 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import Copyright from "../Copyright";
-import { StyledTabs, StyledTab } from "../LinkTabs";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import header from "../../public/images/header.jpg";
+import { StyledTabs, StyledTab } from "../LinkTabs";
 
 const ROUTE_VALUES = {
   "/": 0,
@@ -20,8 +21,8 @@ const ROUTE_VALUES = {
 };
 
 const Nav = ({ spanColor, scrollYProgress }: any) => {
-  const router = useRouter();
-  const [linkValue, setLinkValue] = useState(ROUTE_VALUES[router.pathname]);
+  const pathname = usePathname();
+  const [linkValue, setLinkValue] = useState(ROUTE_VALUES[pathname as string]);
 
   const handleNavigation = (event: SyntheticEvent, newValue: number) =>
     setLinkValue(newValue);
@@ -32,7 +33,7 @@ const Nav = ({ spanColor, scrollYProgress }: any) => {
   const fontSize = useTransform(
     scrollYProgress,
     [0, 0.8],
-    [theme.typography.h3.fontSize, theme.typography.h4.fontSize]
+    [theme.typography.h3.fontSize, theme.typography.h4.fontSize],
   );
   return (
     <>
@@ -71,14 +72,15 @@ const Main: FC<any> = ({ children }) => {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.8],
-    ["#ffffff00", theme.palette.secondary.main]
+    ["#ffffff00", theme.palette.secondary.main],
   );
 
   const color = useTransform(
     scrollYProgress,
     [0, 0.8],
-    [initialColor, theme.palette.primary.main]
+    [initialColor, theme.palette.primary.main],
   );
+
   return (
     <>
       <Header style={{ color, backgroundColor }}>
@@ -88,10 +90,14 @@ const Main: FC<any> = ({ children }) => {
       <ImageContainer ref={ref}>
         <Image
           alt="pilates"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
           src={header}
+          fill
+          sizes="100vw"
+          priority
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
         />
       </ImageContainer>
       <>{children}</>
