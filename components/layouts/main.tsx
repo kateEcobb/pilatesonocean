@@ -7,12 +7,20 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import Copyright from "../Copyright";
-import { StyledTabs, StyledTab } from "../LinkTabs";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import header from "../../public/images/header.jpg";
+import dynamic from "next/dynamic";
+import { StyledTabs, StyledTab } from "../LinkTabs";
+
+// const StyledTabs = dynamic(() =>
+//   import("../LinkTabs").then((mod) => mod.StyledTabs),
+// );
+// const StyledTab = dynamic(() =>
+//   import("../LinkTabs").then((mod) => mod.StyledTab),
+// );
 
 const ROUTE_VALUES = {
   "/": 0,
@@ -21,8 +29,8 @@ const ROUTE_VALUES = {
 };
 
 const Nav = ({ spanColor, scrollYProgress }: any) => {
-  const router = useRouter();
-  const [linkValue, setLinkValue] = useState(ROUTE_VALUES[router.pathname]);
+  const pathname = usePathname();
+  const [linkValue, setLinkValue] = useState(ROUTE_VALUES[pathname as string]);
 
   const handleNavigation = (event: SyntheticEvent, newValue: number) =>
     setLinkValue(newValue);
@@ -80,8 +88,9 @@ const Main: FC<any> = ({ children }) => {
     [0, 0.8],
     [initialColor, theme.palette.primary.main],
   );
+  console.log({ color });
   return (
-    <body>
+    <>
       <Header style={{ color, backgroundColor }}>
         <Nav spanColor={color} scrollYProgress={scrollYProgress} />
       </Header>
@@ -97,7 +106,7 @@ const Main: FC<any> = ({ children }) => {
       </ImageContainer>
       <>{children}</>
       <Copyright />
-    </body>
+    </>
   );
 };
 

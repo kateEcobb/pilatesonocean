@@ -1,7 +1,5 @@
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import Layout from "../components/layouts/main";
-import theme from "../lib/styles/theme";
+import ThemeProvider from "../lib/styles/ThemeProvider";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,10 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Layout>{children}</Layout>
-      </ThemeProvider>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
