@@ -15,7 +15,7 @@
     "@fontsource/sen": "^5.0.18",
     "@mui/material": "^5.15.2",
     "@mui/material-nextjs": "^5.15.0",
-    "framer-motion": "^10.17.0",
+    "framer-motion": "^10.17.9",
     "mapbox-gl": "^3.0.1",
     "next": "^14.0.3",
     "react": "^18.2.0",
