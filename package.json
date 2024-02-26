@@ -13,7 +13,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@fontsource/sen": "^5.0.18",
-    "@mui/material": "^5.15.2",
+    "@mui/material": "^5.15.11",
     "@mui/material-nextjs": "^5.15.0",
     "framer-motion": "^10.17.0",
     "mapbox-gl": "^3.0.1",
