@@ -2,8 +2,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Container, Typography, Link } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
-import Map, { Marker } from "react-map-gl";
+import Grid from "@mui/material/Grid";
+import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
@@ -11,7 +11,7 @@ const Contact: NextPage = () => {
   return (
     <Container>
       <Grid container spacing={3}>
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant="h4" pt={5} pb={3}>
             Contact
           </Typography>
@@ -21,12 +21,12 @@ const Contact: NextPage = () => {
           </Typography>
 
           <Grid container p={0} unstable_level={1}>
-            <Grid xs={3}>
+            <Grid size={{ xs: 3 }}>
               <Typography variant="h6" style={{ fontStyle: "italic" }}>
                 Email:
               </Typography>
             </Grid>
-            <Grid xs={9}>
+            <Grid size={{ xs: 9 }}>
               <Typography variant="h6">
                 <Link href="mailto:isabel@pilatesonocean.com">
                   isabel@pilatesonocean.com
@@ -35,7 +35,7 @@ const Contact: NextPage = () => {
             </Grid>
           </Grid>
           <Grid container px={0} unstable_level={1}>
-            <Grid xs={3}>
+            <Grid size={{ xs: 3 }}>
               <Typography
                 variant="h6"
                 gutterBottom
@@ -44,7 +44,7 @@ const Contact: NextPage = () => {
                 Address:
               </Typography>
             </Grid>
-            <Grid xs={9}>
+            <Grid size={{ xs: 9 }}>
               <Typography variant="h6" gutterBottom>
                 <Link
                   target="_blank"

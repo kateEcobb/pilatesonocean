@@ -41,6 +41,7 @@ const Nav = ({ spanColor, scrollYProgress }: any) => {
       <AnimatedTitle my={3} variant="h3" style={{ fontSize }}>
         Pilates on Ocean
       </AnimatedTitle>
+      <div style={{ marginLeft: `${isDesktop ? "0" : "auto"}` }} />
       <Box my={2}>
         <StyledTabs
           value={linkValue}
@@ -106,7 +107,7 @@ const Main: FC<any> = ({ children }) => {
   );
 };
 
-const AnimatedTitle = motion(Typography);
+const AnimatedTitle = motion.create(Typography);
 
 const Header = styled(motion.div)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
@@ -120,7 +121,7 @@ const Header = styled(motion.div)(({ theme }) => ({
 }));
 
 const ImageContainer = styled(Box)(({ theme }) => ({
-  width: "100vw",
+  display: "flex",
   height: "75vh",
   position: "relative",
 }));

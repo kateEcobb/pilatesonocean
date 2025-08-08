@@ -2,7 +2,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Container, Typography, Box } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 
 const Pricing = ({ service, note = "" }) => (
   <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -21,7 +21,7 @@ const Services: NextPage = () => {
   return (
     <Container>
       <Grid container spacing={3}>
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant="h4" pt={5} pb={3}>
             Services + Pricing
           </Typography>
@@ -31,7 +31,7 @@ const Services: NextPage = () => {
             goals.
           </Typography>
           <Grid container px={0} unstable_level={1}>
-            <Grid xs={3}>
+            <Grid size={{ xs: 3 }}>
               <Typography
                 variant="h6"
                 gutterBottom
@@ -40,7 +40,7 @@ const Services: NextPage = () => {
                 Private sessions
               </Typography>
             </Grid>
-            <Grid xs={9}>
+            <Grid size={{ xs: 9 }}>
               <Typography variant="h6">
                 {pricingOptions.map((option) => (
                   <Pricing key={option.service} {...option} />
@@ -49,7 +49,7 @@ const Services: NextPage = () => {
             </Grid>
           </Grid>
           <Grid container px={0} unstable_level={1}>
-            <Grid xs={3}>
+            <Grid size={{ xs: 3 }}>
               <Typography
                 variant="h6"
                 gutterBottom
@@ -58,7 +58,7 @@ const Services: NextPage = () => {
                 Semi-private sessions
               </Typography>
             </Grid>
-            <Grid xs={9}>
+            <Grid size={{ xs: 9 }}>
               <Typography variant="h6" gutterBottom>
                 $160 per session, or $80 per person.
               </Typography>
