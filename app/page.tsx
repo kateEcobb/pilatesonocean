@@ -90,7 +90,7 @@ const Home: NextPage = () => {
               src={alignment}
               alt="alignment"
               fill
-              sizes="100vw"
+              sizes="(min-width: 700px) 33vw, 100vw"
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
               alt="Isabel Rosenstock"
               src={dancing}
               fill
-              sizes="100vw"
+              sizes="(min-width: 700px) 33vw, 100vw"
               style={{
                 objectFit: "cover",
                 objectPosition: "center",

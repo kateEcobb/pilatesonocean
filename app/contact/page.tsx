@@ -3,7 +3,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { Container, Typography, Link } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import Map, { Marker } from "react-map-gl";
+import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
