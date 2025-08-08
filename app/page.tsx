@@ -3,7 +3,7 @@ import React from "react";
 import type { NextPage } from "next";
 import Typography from "@mui/material/Typography";
 import { Box, styled, Container, Link } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import alignment from "../public/images/alignment.jpg";
 import dancing from "../public/images/isabelDancing.jpg";
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   return (
     <Container>
       <Grid container spacing={5}>
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant="h4" pt={5} pb={3}>
             Welcome
           </Typography>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant="h4" gutterBottom>
             What is Pilates?
           </Typography>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           </Box>
         </Grid>
 
-        <Grid sm={6} xs={12}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <Typography variant="h4" gutterBottom>
             Why do Pilates?
           </Typography>
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <ColorBlock>
             <Image
               src={alignment}
@@ -93,11 +93,12 @@ const Home: NextPage = () => {
               sizes="100vw"
               style={{
                 objectFit: "cover",
-                objectPosition: "center"
-              }} />
+                objectPosition: "center",
+              }}
+            />
           </ColorBlock>
         </Grid>
-        <Grid xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <ColorBlock>
             <Image
               alt="Isabel Rosenstock"
@@ -106,12 +107,13 @@ const Home: NextPage = () => {
               sizes="100vw"
               style={{
                 objectFit: "cover",
-                objectPosition: "center"
-              }} />
+                objectPosition: "center",
+              }}
+            />
           </ColorBlock>
         </Grid>
 
-        <Grid xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <Typography variant="h4" gutterBottom>
             Isabel Rosenstock
           </Typography>
@@ -131,7 +133,7 @@ const Home: NextPage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <Typography variant="h4" gutterBottom>
             Degrees and Certifications
           </Typography>
