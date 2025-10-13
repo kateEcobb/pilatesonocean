@@ -12,9 +12,9 @@ const Pricing = ({ service, note = "" }) => (
 );
 
 const pricingOptions = [
-  { service: "Single session: $120", note: "" },
-  { service: "Package of 5: $575", note: "(expires after 60 days)" },
-  { service: "Package of 10: $1,100", note: "(expires after 120 days)" },
+  { service: "Single session: $130", note: "" },
+  { service: "Package of 5: $625", note: "(expires after 60 days)" },
+  { service: "Package of 10: $1,200", note: "(expires after 120 days)" },
 ];
 
 const Services: NextPage = () => {
@@ -60,7 +60,7 @@ const Services: NextPage = () => {
             </Grid>
             <Grid size={{ xs: 9 }}>
               <Typography variant="h6" gutterBottom>
-                $160 per session, or $80 per person.
+                $170 per session, or $85 per person.
               </Typography>
             </Grid>
           </Grid>
