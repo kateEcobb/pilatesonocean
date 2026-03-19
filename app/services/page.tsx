@@ -64,7 +64,9 @@ const Services: NextPage = () => {
               </Typography>
             </Grid>
           </Grid>
-
+          <Typography variant="subtitle1" gutterBottom py={2} fontWeight="bold">
+            All packages are non-refundable.
+          </Typography>
           <Typography variant="body1" gutterBottom py={2}>
             For those located outside of San Francisco, virtual sessions on Zoom
             are available. All sessions are tailored to your individual needs
