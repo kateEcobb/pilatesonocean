@@ -2,6 +2,7 @@ import ThemeProvider from "../lib/styles/ThemeProvider";
 
 import { Metadata } from "next";
 
+
 export const metadata: Metadata = {
   title: "Pilates on Ocean",
   description:
