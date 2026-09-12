@@ -24,7 +24,12 @@ const Home: NextPage = () => {
     <Container>
       <Grid container spacing={5}>
         <Grid size={{ xs: 12 }}>
-          <Typography variant="h4" pt={5} pb={3}>
+          <Typography
+            variant="h4"
+            sx={{
+              pt: 5,
+              pb: 3
+            }}>
             Welcome
           </Typography>
           <Box>

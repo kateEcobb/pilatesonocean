@@ -22,15 +22,24 @@ const Services: NextPage = () => {
     <Container>
       <Grid container spacing={3}>
         <Grid size={{ xs: 12 }}>
-          <Typography variant="h4" pt={5} pb={3}>
+          <Typography
+            variant="h4"
+            sx={{
+              pt: 5,
+              pb: 3
+            }}>
             Services + Pricing
           </Typography>
 
-          <Typography variant="h6" gutterBottom py={2}>
+          <Typography variant="h6" gutterBottom sx={{
+            py: 2
+          }}>
             All in-studio sessions are tailored to your individual needs and
             goals.
           </Typography>
-          <Grid container px={0} unstable_level={1}>
+          <Grid container unstable_level={1} sx={{
+            px: 0
+          }}>
             <Grid size={{ xs: 3 }}>
               <Typography
                 variant="h6"
@@ -48,7 +57,9 @@ const Services: NextPage = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container px={0} unstable_level={1}>
+          <Grid container unstable_level={1} sx={{
+            px: 0
+          }}>
             <Grid size={{ xs: 3 }}>
               <Typography
                 variant="h6"
@@ -64,16 +75,30 @@ const Services: NextPage = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Typography variant="subtitle1" gutterBottom py={2} fontWeight="bold">
+          <Typography
+            variant="subtitle1"
+            gutterBottom
+            sx={{
+              py: 2,
+              fontWeight: "bold"
+            }}>
             All packages are non-refundable.
           </Typography>
-          <Typography variant="body1" gutterBottom py={2}>
+          <Typography variant="body1" gutterBottom sx={{
+            py: 2
+          }}>
             For those located outside of San Francisco, virtual sessions on Zoom
             are available. All sessions are tailored to your individual needs
             and space/equipment limitations. Virtual sessions are effective and
             engaging whether you have all the equipment or nothing at all.
           </Typography>
-          <Typography variant="h6" gutterBottom py={2} fontWeight="bold">
+          <Typography
+            variant="h6"
+            gutterBottom
+            sx={{
+              py: 2,
+              fontWeight: "bold"
+            }}>
             All appointments canceled or rescheduled with less than 24-hour
             notice will incur the full appointment fee.
           </Typography>

@@ -42,7 +42,9 @@ const Nav = ({ spanColor, scrollYProgress }: any) => {
         Pilates on Ocean
       </AnimatedTitle>
       <div style={{ marginLeft: `${isDesktop ? "0" : "auto"}` }} />
-      <Box my={2}>
+      <Box sx={{
+        my: 2
+      }}>
         <StyledTabs
           value={linkValue}
           onChange={handleNavigation}

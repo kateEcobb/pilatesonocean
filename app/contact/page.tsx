@@ -12,15 +12,24 @@ const Contact: NextPage = () => {
     <Container>
       <Grid container spacing={3}>
         <Grid size={{ xs: 12 }}>
-          <Typography variant="h4" pt={5} pb={3}>
+          <Typography
+            variant="h4"
+            sx={{
+              pt: 5,
+              pb: 3
+            }}>
             Contact
           </Typography>
 
-          <Typography variant="h6" gutterBottom py={2}>
+          <Typography variant="h6" gutterBottom sx={{
+            py: 2
+          }}>
             Let&apos;s get in touch.
           </Typography>
 
-          <Grid container p={0} unstable_level={1}>
+          <Grid container unstable_level={1} sx={{
+            p: 0
+          }}>
             <Grid size={{ xs: 3 }}>
               <Typography variant="h6" style={{ fontStyle: "italic" }}>
                 Email:
@@ -34,7 +43,9 @@ const Contact: NextPage = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container px={0} unstable_level={1}>
+          <Grid container unstable_level={1} sx={{
+            px: 0
+          }}>
             <Grid size={{ xs: 3 }}>
               <Typography
                 variant="h6"
