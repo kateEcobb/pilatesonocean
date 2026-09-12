@@ -20,13 +20,15 @@ export const StyledTabs = styled(({ spanColor, ...other }: StyledTabsProps) => {
     <Tabs
       {...other}
       textColor="inherit"
-      TabIndicatorProps={{
-        children: (
-          <motion.span
-            style={{ backgroundColor: spanColor }}
-            className="MuiTabs-indicatorSpan"
-          />
-        ),
+      slotProps={{
+        indicator: {
+          children: (
+            <motion.span
+              style={{ backgroundColor: spanColor }}
+              className="MuiTabs-indicatorSpan"
+            />
+          ),
+        }
       }}
     />
   );
