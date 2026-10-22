@@ -18,7 +18,7 @@
     "@mui/material-nextjs": "^9.4.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
-    "mapbox-gl": "^3.30.0",
+    "mapbox-gl": "^3.31.0",
     "next": "16.3.5",
     "react": "19.3.0",
     "react-dom": "19.3.0",
